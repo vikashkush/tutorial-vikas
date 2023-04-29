@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>string operations</h1>
-</body>
+    <label for="name">enter some name</label>
+    <input type="text" name="name" id="box" />
+    <button onclick="print()">print</button>
+    <div id="nameresult"></div>
+
+    <script>
+      function print() {
+        const nameElement = document.querySelector("#box");
+        let name = nameElement.value;
+        displayers(name);
+      }
+
+      function displayers(name) {
+        let container = document.querySelector("#nameresult");
+        for (let i = 0; i < name.length; i++) {
+          const str = name[i];
+          let elem = document.createElement("div");
+          elem.innerText = str;
+          container.appendChild(elem)
+        }
+
+      }
+    </script>
+  </body>
 </html>
