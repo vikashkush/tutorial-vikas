@@ -8,12 +8,29 @@
   </head>
   <body>
     <h1>string operations</h1>
-    <label for="name">enter some name</label>
-    <input type="text" name="name" id="box" />
-    <button onclick="print()">print</button>
-    <div id="nameresult"></div>
 
+    <div class="sample1">
+      <label for="name">enter some name</label>
+      <input type="text" name="name" id="box" />
+      <button onclick="print()">print</button>
+      <div id="nameresult"></div>
+    </div>
+    <div class="sample2"></div>
+    <label for="salutation">salutation</label>
+    <input type="text" name="name1" id="first" />
+    <div>
+      <label for="first name">firstname</label>
+      <input type="text" name="name2" id="second" />
+    </div>
+    <div>
+      <label for="last name">lastname</label>
+      <input type="text" name="name3" id="third" />
+    </div>
+    <button onclick="greatperson()">greatperson</button>
+    <div id="result"></div>
     <script>
+      //#region sample1
+
       function print() {
         const nameElement = document.querySelector("#box");
         let name = nameElement.value;
@@ -21,15 +38,31 @@
       }
 
       function displayers(name) {
-        let container = document.querySelector("#nameresult");
+              let container = document.querySelector("#nameresult");
         for (let i = 0; i < name.length; i++) {
           const str = name[i];
           let elem = document.createElement("div");
           elem.innerText = str;
-          container.appendChild(elem)
+          container.appendChild(elem);
         }
+      }
+      //#endregion
+      //#regionsample2
+      function greatperson(){
+       let name=document.querySelector("#first").value;
+       let name2=document.querySelector("#second").value;
+       let name3=document.querySelector("#third").value;
+       var elem= "hello!"+"&nbsp;"+name+"&nbsp;"+name2+"&nbsp;"+name3+"&nbsp;";
+      //  console.log(elem)
+         document.querySelector("#result").innerHTML=elem;
 
       }
+     
+      
+
+    
+
+      //#endregion
     </script>
   </body>
 </html>
