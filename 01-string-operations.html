@@ -44,6 +44,13 @@
       <input type="text" name="" id="second" />
       <button onclick="search()">search</button>
       <div id="searchsting"></div>
+    </div>
+    <div>
+      <label for="">str</label>
+      <input type="text" name="" id="rts">
+      <button onclick="reverseStr()">reverse</button>
+      <div id="true"></div>
+      <div id="false"></div>
     </div> 
     <script>
       //#region sample1
@@ -130,7 +137,7 @@
               // console.log(str2)
             }
             // let container=document.querySelector("div")
-            // container=document.querySelector("#total");
+             container=document.querySelector("#total");
              div=document.createElement("div");
             div.innerHTML=`${countchar}=${counter}`;
             container.appendChild(div)
@@ -139,8 +146,22 @@
             }
 
       //#endregion
-    //#region counter
+    //#region reverse
+     function reverseStr(){
+     let reverseString="";
+      let str2=document.querySelector("#rts").value;
+      for (let index = str2.length-1; index >=0;index--) {
+        const doc= str2[index];
+        reverseString=reverseString+doc; 
+      }  
+        // console.log(doc);
+         let container=document.querySelector("#true");
+        let  div=document.createElement("div");
+         div.innerHTML=`${reverseString}`;
+        container.appendChild(div);
+      
+     }
     //#endregion
-    </script>
+   </script>
   </body>
 </html>
