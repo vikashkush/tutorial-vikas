@@ -7,15 +7,23 @@
     <title>Document</title>
   </head>
   <body>
+    <div>
+      <label for="">string</label>
+      <input type="text" name="" id="first">
+      <label for="">char</label>
+      <input type="text" name="" id="second">
+    <button onclick="count()">count</button>
+      <div id="total"></div>
+    </div>
     <h1>string operations</h1>
-
+    
     <div class="sample1">
       <label for="name">enter some name</label>
       <input type="text" name="name" id="box" />
       <button onclick="print()">print</button>
       <div id="nameresult"></div>
     </div>
-    <div class="sample2"></div>
+    <div class="sample2">
     <label for="salutation">salutation</label>
     <input type="text" name="name1" id="first" />
     <div>
@@ -28,6 +36,15 @@
     </div>
     <button onclick="greatperson()">greatperson</button>
     <div id="result"></div>
+    </div>
+    <div>
+      <label for="string1">string1</label>
+      <input type="text" name="" id="first" />
+      <label for="search char">search char</label>
+      <input type="text" name="" id="second" />
+      <button onclick="search()">search</button>
+      <div id="searchsting"></div>
+    </div> 
     <script>
       //#region sample1
 
@@ -38,7 +55,7 @@
       }
 
       function displayers(name) {
-              let container = document.querySelector("#nameresult");
+        let container = document.querySelector("#nameresult");
         for (let i = 0; i < name.length; i++) {
           const str = name[i];
           let elem = document.createElement("div");
@@ -47,22 +64,83 @@
         }
       }
       //#endregion
-      //#regionsample2
-      function greatperson(){
-       let name=document.querySelector("#first").value;
-       let name2=document.querySelector("#second").value;
-       let name3=document.querySelector("#third").value;
-       var elem= "hello!"+"&nbsp;"+name+"&nbsp;"+name2+"&nbsp;"+name3+"&nbsp;";
-      //  console.log(elem)
-         document.querySelector("#result").innerHTML=elem;
-
+      //#region sample2
+      function greatperson() {
+        let name = document.querySelector("#first").value;
+        let name2 = document.querySelector("#second").value;
+        let name3 = document.querySelector("#third").value;
+        var elem =
+          "hello!" +
+          "&nbsp;" +
+          name +
+          "&nbsp;" +
+          name2 +
+          "&nbsp;" +
+          name3 +
+          "&nbsp;";
+        document.querySelector("#result").innerHTML = elem;
       }
-     
-      
+      //#endregion
+      //#region search in string
+      // let charfound = false;
+      function search() {
+        let string1 = document.querySelector("#first").value;
+        var element = document.querySelector("#second").value;
+        for (i = 0; i < string1.length; i++) {
+          var num = string1[i];
+          if (num === element) {
+            // //  charfound === true;
+            // console.log(`${element} is at position ${i + 1}`);
+            let container = document.querySelector("#searchsting");
+            let div = document.createElement("div");
+            div.innerText = `${element} is at position ${i + 1}`;
+            container.appendChild(div);break
+            // break;
+          }
+        }
 
-    
+        // if(charfound === false){
+        //                     console.log(`${char} not found `);
+        //         }
+      }
 
       //#endregion
+      //#region search in string input
+      //   function search(){
+      //   var str1=document.querySelector("#first").value;
+      //   var str2=document.querySelector("#second").value;
+      //   console.log(str2);
+      //   document.querySelector("#element").innerHTML;
+      // }
+      //#endregion
+      //#region function character
+           function count(){
+            let counter=0;
+            container=document.querySelector("#total");
+
+            var string1=document.querySelector("#first").value;
+      var countchar=document.querySelector("#second").value;
+          for (let index = 0; index < string1.length; index++) {
+            // const str1=string1[index];
+            // // console.log(str1)
+            if(string1[index]===countchar){
+            counter=counter+1}
+            // for (let i = 0; i < countchar.length; i++) {
+            //   const str2=countchar[i];
+              // console.log(str2)
+            }
+            // let container=document.querySelector("div")
+            // container=document.querySelector("#total");
+             div=document.createElement("div");
+            div.innerHTML=`${countchar}=${counter}`;
+            container.appendChild(div)
+
+          
+            }
+
+      //#endregion
+    //#region counter
+    //#endregion
     </script>
   </body>
 </html>
