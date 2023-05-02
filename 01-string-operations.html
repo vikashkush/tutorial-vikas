@@ -9,14 +9,14 @@
   <body>
     <div>
       <label for="">string</label>
-      <input type="text" name="" id="first">
+      <input type="text" name="" id="first" />
       <label for="">char</label>
-      <input type="text" name="" id="second">
-    <button onclick="count()">count</button>
+      <input type="text" name="" id="second" />
+      <button onclick="count()">count</button>
       <div id="total"></div>
     </div>
     <h1>string operations</h1>
-    
+
     <div class="sample1">
       <label for="name">enter some name</label>
       <input type="text" name="name" id="box" />
@@ -24,18 +24,18 @@
       <div id="nameresult"></div>
     </div>
     <div class="sample2">
-    <label for="salutation">salutation</label>
-    <input type="text" name="name1" id="first" />
-    <div>
-      <label for="first name">firstname</label>
-      <input type="text" name="name2" id="second" />
-    </div>
-    <div>
-      <label for="last name">lastname</label>
-      <input type="text" name="name3" id="third" />
-    </div>
-    <button onclick="greatperson()">greatperson</button>
-    <div id="result"></div>
+      <label for="salutation">salutation</label>
+      <input type="text" name="name1" id="first" />
+      <div>
+        <label for="first name">firstname</label>
+        <input type="text" name="name2" id="second" />
+      </div>
+      <div>
+        <label for="last name">lastname</label>
+        <input type="text" name="name3" id="third" />
+      </div>
+      <button onclick="greatperson()">greatperson</button>
+      <div id="result"></div>
     </div>
     <div>
       <label for="string1">string1</label>
@@ -47,11 +47,23 @@
     </div>
     <div>
       <label for="">str</label>
-      <input type="text" name="" id="rts">
+      <input type="text" name="" id="rts" />
       <button onclick="reverseStr()">reverse</button>
       <div id="true"></div>
       <div id="false"></div>
-    </div> 
+    </div>
+    <div>
+      <label for="">input string</label>
+      <input type="text" name="" id="input1" />
+      <button onclick="print()">print</button>
+      <div id="alse"></div>
+    </div>
+    <div>
+      <label for="">word</label>
+      <input type="text" name="" id="first2">
+      <button onclick="check()">check</button>
+      <div id="third"></div>
+    </div>
     <script>
       //#region sample1
 
@@ -101,7 +113,8 @@
             let container = document.querySelector("#searchsting");
             let div = document.createElement("div");
             div.innerText = `${element} is at position ${i + 1}`;
-            container.appendChild(div);break
+            container.appendChild(div);
+            break;
             // break;
           }
         }
@@ -121,47 +134,73 @@
       // }
       //#endregion
       //#region function character
-           function count(){
-            let counter=0;
-            container=document.querySelector("#total");
+      function count() {
+        let counter = 0;
+        container = document.querySelector("#total");
 
-            var string1=document.querySelector("#first").value;
-      var countchar=document.querySelector("#second").value;
-          for (let index = 0; index < string1.length; index++) {
-            // const str1=string1[index];
-            // // console.log(str1)
-            if(string1[index]===countchar){
-            counter=counter+1}
-            // for (let i = 0; i < countchar.length; i++) {
-            //   const str2=countchar[i];
-              // console.log(str2)
-            }
-            // let container=document.querySelector("div")
-             container=document.querySelector("#total");
-             div=document.createElement("div");
-            div.innerHTML=`${countchar}=${counter}`;
-            container.appendChild(div)
-
-          
-            }
+        var string1 = document.querySelector("#first").value;
+        var countchar = document.querySelector("#second").value;
+        for (let index = 0; index < string1.length; index++) {
+          // const str1=string1[index];
+          // // console.log(str1)
+          if (string1[index] === countchar) {
+            counter = counter + 1;
+          }
+          // for (let i = 0; i < countchar.length; i++) {
+          //   const str2=countchar[i];
+          // console.log(str2)
+        }
+        // let container=document.querySelector("div")
+        container = document.querySelector("#total");
+        div = document.createElement("div");
+        div.innerHTML = `${countchar}=${counter}`;
+        container.appendChild(div);
+      }
 
       //#endregion
-    //#region reverse
-     function reverseStr(){
-     let reverseString="";
-      let str2=document.querySelector("#rts").value;
-      for (let index = str2.length-1; index >=0;index--) {
-        const doc= str2[index];
-        reverseString=reverseString+doc; 
-      }  
+      //#region reverse
+      function reverseStr() {
+        let reverseString = "";
+        let str2 = document.querySelector("#rts").value;
+        for (let index = str2.length - 1; index >= 0; index--) {
+          const doc = str2[index];
+          reverseString = reverseString + doc;
+        }
         // console.log(doc);
-         let container=document.querySelector("#true");
-        let  div=document.createElement("div");
-         div.innerHTML=`${reverseString}`;
+        let container = document.querySelector("#true");
+        let div = document.createElement("div");
+        div.innerHTML = `${reverseString}`;
         container.appendChild(div);
+      }
+      //#endregion
+      //#region even odd
+      function print() {
+        let even = "";
+        let odd="";
+        let rts = document.querySelector("#input1").value;
+        for (let index = 0; index < rts.length; index++) {
+          const element = rts[index];
+          if((index+1)%2==0) {
+             even+=element;
+          }
+          if((index+1)%2!==0) {
+             odd+=element;
+          }
+        }
+        let container = document.querySelector("#alse");
+          let div = document.createElement("div");
+          let div1 = document.createElement("div");
+          div.innerText = "Even String is -  "+even;
+          div1.innerText = "odd String is -  "+odd;
+          container.appendChild(div);
+          container.appendChild(div1);
+        }
       
-     }
-    //#endregion
-   </script>
+      //#endregion
+  //#region palindrone str 
+    
+    
+  //#endregion
+  </script>
   </body>
 </html>
