@@ -15,25 +15,26 @@
       <div id="second"></div>
     </div> -->
     <div>
-        <label for="">table</label>
-        <input type="text" name="" id="third">
-        <button onclick="printtable()">printtable</button>
-        <div id="restable"></div>
+      <label for="">table</label>
+      <input type="text" name="" id="third" />
+      <button onclick="printtable()">printtable</button>
+      <div id="restable"></div>
     </div>
+    <div id="first"></div>
     <fieldset>
       <legend></legend>
     </fieldset>
     <script>
-    // //   #region arry
-    //   let arr = [];
-    //   function print(len) {
-    //     for (let index = 1; index <= len; index++) {
-    //       arr.push(index);
-    //     }
-    //     console.log(arr);
-    //   }
-    //   print(5);
-    //   //#endregion
+      // //   #region arry
+      //   let arr = [];
+      //   function print(len) {
+      //     for (let index = 1; index <= len; index++) {
+      //       arr.push(index);
+      //     }
+      //     console.log(arr);
+      //   }
+      //   print(5);
+      //   //#endregion
       //#region arry t
 
       let arry = [];
@@ -50,36 +51,34 @@
       }
       //#endregion
       //#region table
-      function printtable(){
-    let index;
-   let str4 =document.querySelector("#third").value;
-   for (let index = 1; index <=10; index++) {
-    const element = [index];
-    res=str4*index;
-    let container=document.querySelector("#restable")
-    let div=document.createElement("div")
-    div.innerText=`${str4}x${index}=${res}`;
-    container.appendChild(div)
-   }
-}
-//#endregion
-//#relgion body
+      function printtable() {
+        let index;
+        let str4 = document.querySelector("#third").value;
+        for (let index = 1; index <= 10; index++) {
+          const element = [index];
+          res = str4 * index;
+          let container = document.querySelector("#restable");
+          let div = document.createElement("div");
+          div.innerText = `${str4}x${index}=${res}`;
+          container.appendChild(div);
+        }
+      }
+      //#endregion
+      //#region body
+      let body = document.querySelector("#first");
+      let h = document.createElement("h1");
+      h.innerText = "my work done";
+      body.appendChild(h);
+      let div = document.createElement("div");
+      let para = document.createElement("p");
+      let span = document.createElement("span");
+      para.innerText = "Hello ";
+      span.innerText = "hii";
+      div.appendChild(para);
+      div.appendChild(span);
+      body.appendChild(div);
 
-let body = document.querySelector("body"); 
-    let h = document.createElement("h1"); 
-    h.innerText = "my work done"; 
-    body.appendChild(h); 
-    let div = document.createElement("div"); 
-    let para = document.createElement("p"); 
-    let span = document.createElement("span")
-    para.innerText = "Hello "; 
-    span.innerText = "hii";
-    div.appendChild(para);
-    div.appendChild(span); 
-    body.appendChild(div);
-
-
-//#endrelgion
-</script>
-    </body>
+      //#endregion
+    </script>
+  </body>
 </html>

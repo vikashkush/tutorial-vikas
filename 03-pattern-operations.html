@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend></legend>
+    </fieldset>
+    <script>
+    //#region logical
+      for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= 5; j++) {
+          if (i > j || i == j || i + j >= 6) {
+            document.write("*");
+          } else {
+            document.write("&nbsp;&nbsp;");
+          }
+        }
+        document.write("<br>")
+      }
+      //#endregion
+      //#region cross pattern
+      for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= 5; j++) {
+          if ( i === j || i + j === 6) {
+            document.write("*");
+          } else {
+            document.write("&nbsp;&nbsp;");
+          }
+        }
+        document.write("<br>")
+      }
+      //#endregion
+            //#region seven pattern
+            for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= 5; j++) {
+          if ( i === 1 || i + j === 6) {
+            document.write("*");
+          } else {
+            document.write("&nbsp;&nbsp;");
+          }
+        }
+        document.write("<br>")
+      }
+      //#endregion
+       
+      
+             //#region l pattern
+             for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= 5; j++) {
+          if ( i === 5 ||  j === 1) {
+            document.write("*");
+          } else {
+            document.write("&nbsp;&nbsp;");
+          }
+        }
+        document.write("<br>")
+      }
+      //#endregion
+           //#region squre pattern
+           for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= 5; j++) {
+          if ( i === 5||i===1||j===5 ||  j === 1) {
+            document.write("*");
+          } else {
+            document.write("&nbsp;&nbsp;");
+          }
+        }
+        document.write("<br>")
+      }
+      //#endregion
+     let min=1;
+     let max=7;
+     let center=4;
+      for (let i = 1; i <= 7; i++) {
+        for (let j = 1; j <= 7; j++) {
+          if ((i+j<=3)||(i+j==13)||(i+j==14)
+          ||(Math.abs(i-j)==5)||(Math.abs(i-j)==6)){
+            document.write("&nbsp;&nbsp;");
+          } else {
+            document.write("*");
+          }
+        }
+        document.write("<br>")
+      }
+    </script>
+  </body>
+</html>
