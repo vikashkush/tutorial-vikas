@@ -34,7 +34,7 @@
     //   }
     //   print(5);
     //   //#endregion
-      //#region arry table
+      //#region arry t
 
       let arry = [];
       function generate() {
@@ -49,6 +49,7 @@
         container.appendChild(div);
       }
       //#endregion
+      //#region table
       function printtable(){
     let index;
    let str4 =document.querySelector("#third").value;
@@ -61,6 +62,24 @@
     container.appendChild(div)
    }
 }
+//#endregion
+//#relgion body
+
+let body = document.querySelector("body"); 
+    let h = document.createElement("h1"); 
+    h.innerText = "my work done"; 
+    body.appendChild(h); 
+    let div = document.createElement("div"); 
+    let para = document.createElement("p"); 
+    let span = document.createElement("span")
+    para.innerText = "Hello "; 
+    span.innerText = "hii";
+    div.appendChild(para);
+    div.appendChild(span); 
+    body.appendChild(div);
+
+
+//#endrelgion
 </script>
     </body>
 </html>
