@@ -64,6 +64,13 @@
       <button onclick="check()">check</button>
       <div id="third"></div>
     </div>
+    <div>
+      <label for="">top</label>
+      <input type="text" name="" id="firstst">
+      <label for="">top1</label>
+      <!-- <input type="text" name="" id="second"> -->
+      <button onclick="numberofstar()">numberofstar</button>
+    </div>
     <script>
       //#region sample1
 
@@ -198,8 +205,53 @@
       
       //#endregion
   //#region palindrone str 
+     function numberofstar(){
+     let mode=+document.querySelector("#firstst").value;
+      let min=1;
+     let max=mode*3-2;
+     let center=(max+1)/2;
+    let lowerRange=(max-mode)/2+2;
+    let upperRange=lowerRange+(mode-3);
+     let topLeftDiagonal= (mode+1);
+     let bothDiagonal=mode*2-2;
+     let lowerRightDiagonal=mode*5-3;
+      for (let row = 1; row <= max; row++) {
+          for (let col = 1; col <= max; col++) {
+              if((row + col===topLeftDiagonal) || (row + col ===lowerRightDiagonal) || 
+              (row - col ===bothDiagonal) || 
+              (col-row ===bothDiagonal) || ((row == min ||row == max) &&
+              (col >= lowerRange && col <= upperRange )) ||
+               ((col == min ||col == max) && (row >= lowerRange && row <= upperRange)))
+              
+              {
+                  document.write("*&nbsp;&nbsp;");
+
+              }
+              else{
+                  document.write("&nbsp;&nbsp;&nbsp;&nbsp;")
+              }
+          }
+          document.write("<br>");
+      }
+    }
+      // for (let i = 1; i <= max; i++) {
+      //   for (let j = 1; j <= max; j++) {
+      //     if ((i+j==4)||(i+j==12)||(i-j==4)
+      //     ||(j-i===4)||((i-min))){
+      //       document.write("*");
+      //     } else {
+      //       document.write("&nbsp;&nbsp;");
+      //     }
+      //   }
+      //   document.write("<br>")
+      // }}
+
+
+
     
-    
+  
+      
+     
   //#endregion
   </script>
   </body>

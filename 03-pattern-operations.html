@@ -73,12 +73,14 @@
         document.write("<br>")
       }
       //#endregion
-     let min=1;
+     
+     //#region circle
+      let min=1;
      let max=7;
      let center=4;
       for (let i = 1; i <= 7; i++) {
         for (let j = 1; j <= 7; j++) {
-          if ((i+j<=3)||(i+j==13)||(i+j==14)
+          if ((i+j<=3)||(i+j>=13)
           ||(Math.abs(i-j)==5)||(Math.abs(i-j)==6)){
             document.write("&nbsp;&nbsp;");
           } else {
@@ -87,6 +89,23 @@
         }
         document.write("<br>")
       }
+      //#endregion
+        //#region circle
+        let mn=1;
+     let mx=7;
+     let cnter=4;
+      for (let i = 1; i <= 7; i++) {
+        for (let j = 1; j <= 7; j++) {
+          if ((i+j<=3)||(i+j==13)||(i+j==14)
+          ||(Math.abs(i-j)==5)||(Math.abs(i-j)==6)){
+            document.write("*");
+          } else {
+            document.write("&nbsp;&nbsp;");
+          }
+        }
+        document.write("<br>")
+      }
+      //#endregion
     </script>
   </body>
 </html>
