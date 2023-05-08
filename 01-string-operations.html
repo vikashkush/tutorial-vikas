@@ -60,16 +60,17 @@
     </div>
     <div>
       <label for="">word</label>
-      <input type="text" name="" id="first2">
+      <input type="text" name="" id="first2" />
       <button onclick="check()">check</button>
       <div id="third"></div>
     </div>
     <div>
       <label for="">top</label>
-      <input type="text" name="" id="firstst">
+      <input type="text" name="" id="firstst" />
       <label for="">top1</label>
       <!-- <input type="text" name="" id="second"> -->
       <button onclick="numberofstar()">numberofstar</button>
+      <div id="thirds"></div>
     </div>
     <script>
       //#region sample1
@@ -183,57 +184,67 @@
       //#region even odd
       function print() {
         let even = "";
-        let odd="";
+        let odd = "";
         let rts = document.querySelector("#input1").value;
         for (let index = 0; index < rts.length; index++) {
           const element = rts[index];
-          if((index+1)%2==0) {
-             even+=element;
+          if ((index + 1) % 2 == 0) {
+            even += element;
           }
-          if((index+1)%2!==0) {
-             odd+=element;
+          if ((index + 1) % 2 !== 0) {
+            odd += element;
           }
         }
         let container = document.querySelector("#alse");
-          let div = document.createElement("div");
-          let div1 = document.createElement("div");
-          div.innerText = "Even String is -  "+even;
-          div1.innerText = "odd String is -  "+odd;
-          container.appendChild(div);
-          container.appendChild(div1);
-        }
-      
-      //#endregion
-  //#region palindrone str 
-     function numberofstar(){
-     let mode=+document.querySelector("#firstst").value;
-      let min=1;
-     let max=mode*3-2;
-     let center=(max+1)/2;
-    let lowerRange=(max-mode)/2+2;
-    let upperRange=lowerRange+(mode-3);
-     let topLeftDiagonal= (mode+1);
-     let bothDiagonal=mode*2-2;
-     let lowerRightDiagonal=mode*5-3;
-      for (let row = 1; row <= max; row++) {
-          for (let col = 1; col <= max; col++) {
-              if((row + col===topLeftDiagonal) || (row + col ===lowerRightDiagonal) || 
-              (row - col ===bothDiagonal) || 
-              (col-row ===bothDiagonal) || ((row == min ||row == max) &&
-              (col >= lowerRange && col <= upperRange )) ||
-               ((col == min ||col == max) && (row >= lowerRange && row <= upperRange)))
-              
-              {
-                  document.write("*&nbsp;&nbsp;");
-
-              }
-              else{
-                  document.write("&nbsp;&nbsp;&nbsp;&nbsp;")
-              }
-          }
-          document.write("<br>");
+        let div = document.createElement("div");
+        let div1 = document.createElement("div");
+        div.innerText = "Even String is -  " + even;
+        div1.innerText = "odd String is -  " + odd;
+        container.appendChild(div);
+        container.appendChild(div1);
       }
-    }
+
+      //#endregion
+      //#region star print
+
+      function numberofstar() {
+        let x = "";
+        let mode = +document.querySelector("#firstst").value;
+        let min = 1;
+        let max = mode * 3 - 2;
+        let center = (max + 1) / 2;
+        let lowerRange = (max - mode) / 2 + 2;
+        let upperRange = lowerRange + (mode - 3);
+        let topLeftDiagonal = mode + 1;
+        let bothDiagonal = mode * 2 - 2;
+        let lowerRightDiagonal = mode * 5 - 3;
+        let mainContainer = document.querySelector("#thirds");
+        for (let row = 1; row <= max; row++) {
+          for (let col = 1; col <= max; col++) {
+            if (
+              row + col === topLeftDiagonal ||
+              row + col === lowerRightDiagonal ||
+              row - col === bothDiagonal ||
+              col - row === bothDiagonal ||
+              ((row == min || row == max) &&
+                col >= lowerRange &&
+                col <= upperRange) ||
+              ((col == min || col == max) &&
+                row >= lowerRange &&
+                row <= upperRange)
+            ) {
+              x += "*&nbsp;&nbsp;";
+            } else {
+              x += "&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+          }
+          let divRow = document.createElement("div");
+          divRow.innerHTML = x;
+          mainContainer.appendChild(divRow);
+          x = "\n";
+        }
+        console.log(x);
+      }
       // for (let i = 1; i <= max; i++) {
       //   for (let j = 1; j <= max; j++) {
       //     if ((i+j==4)||(i+j==12)||(i-j==4)
@@ -246,13 +257,7 @@
       //   document.write("<br>")
       // }}
 
-
-
-    
-  
-      
-     
-  //#endregion
-  </script>
+      //#endregion
+    </script>
   </body>
 </html>

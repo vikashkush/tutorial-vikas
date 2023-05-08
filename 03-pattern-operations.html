@@ -106,6 +106,29 @@
         document.write("<br>")
       }
       //#endregion
-    </script>
+   //#region diagram
+   for (let row =1; row<=3; row++) {
+    for ( col=1 ;col<=5;col++) {
+      if((row+col<4)||(col-row>2)){
+        document.write("&nbsp;&nbsp;");
+    }
+ else
+ { document.write("*")}
+  }
+   document.write("<br>")
+}
+   //#endregion
+  //#region triangle
+  for (let row= 1; row<=3;row++) {
+    for (let  col= 1; col<=5;col ++) {
+      if((row+col==4)||(col-row==2)||(row==3)){
+        document.write("*")
+      }
+      else{document.write("&nbsp;")}
+    }  
+    document.write("<br>")
+  }
+  //#endregion
+  </script>
   </body>
 </html>
