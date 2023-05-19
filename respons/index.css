@@ -1,0 +1,20 @@
+*{
+   margin: 0; 
+   padding: 0;
+   
+}
+
+body
+{
+    color: darkblue;
+    font-size: 10px;
+    font-weight: 400;
+    scroll-behavior: smooth;
+    line-height: 1.5;
+
+}
+.navbar-brand{
+    background-image: url(images/images.jpg);
+}
+
+
