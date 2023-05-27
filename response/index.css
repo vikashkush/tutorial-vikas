@@ -1,0 +1,57 @@
+html{
+    background-image: url(https://www.viasat.com/content/dam/us-site/government/images/1245270_Space_Domain_Hero_003.jpg) ;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    height: 100hv;
+    wight:100vw;
+  }
+  
+  body{
+    color: white;
+  }
+  
+  .logo img {
+    margin-left: 5%;
+    width: 100px;
+  }
+  .mega-nav{
+    display: flex;
+  }
+  
+  .logo {
+     width: 10%;
+  }
+  .line {
+    width: 40%;
+    border-bottom: .1px solid grey;
+    margin-bottom: 50px;
+  }
+  nav .right-log {
+    width: 52%;
+    backdrop-filter: blur(3.3rem);
+    background-color:rgba(255,255,255,0.07);
+  
+  }
+  nav .right-log ul{
+    display: flex;
+    padding-right: 3%;
+    
+  }
+  nav .right-log ul li {
+    list-style: none;
+    margin: 4%;
+  }
+  
+  nav .right-log ul span {
+    font-weight: 900;
+    margin-left: 1%;
+  }
+  
+  nav .right-log ul li:hover {
+    border-bottom: 5px solid ;
+    margin-bottom: -18px;
+  }
+  
+  
+  
+  
