@@ -2,11 +2,11 @@ html{
     background-image: url(https://www.viasat.com/content/dam/us-site/government/images/1245270_Space_Domain_Hero_003.jpg) ;
     background-repeat: no-repeat; 
     background-size: cover;
-    height: 100hv;
-    wight:100vw;
-  }
-  
-  body{
+    height:20%;
+    width: 100%;
+
+   }
+    body{
     color: white;
   }
   
@@ -17,7 +17,7 @@ html{
   .mega-nav{
     display: flex;
   }
-  
+
   .logo {
      width: 10%;
   }
@@ -51,6 +51,49 @@ html{
     border-bottom: 5px solid ;
     margin-bottom: -18px;
   }
+  .h1{
+  color: aliceblue;
+  margin-bottom :40px;
+
+  }
+  .p1{
+    color: antiquewhite;
+    word-spacing: 20px;
+    margin-bottom :50px;
+  }
+  .btns{
+    background-color: black;
+    color: white;
+    /* border-color:black; */
+  }
+
+  .btns:hover{
+    border-radius: 2px solid ;
+    color:greenyellow;
+  }
+
+ .btn:hover{
+    background-color: rgb(129, 129, 235);
+    color: white;
+  }
+  .container{
+    color: black;
+    /* background-image: url(image1.jpg) repeat; */
+  }
+.p2{
+    margin-left: 60%;
+  }
+  .h2{
+    text-align:center;
+    align-items: center;
+    border-color: rgb(45, 45, 87);
+    border-radius: 2px;
+  }
+  .img1{
+    height:80vh;
+   /* margin-bottom: 80%; */
+  }
+
   
   
   
