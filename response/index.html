@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <div class="div1"></div>
@@ -16,12 +19,14 @@
     <div class="right-log">
       <ul>
         <li><a> <span>00&nbsp;&nbsp;</span>HOME</a></li>
-        <li><a> <span>01&nbsp;&nbsp;</span>ABOUT</a></li>
-        <li><a> <span>02&nbsp;&nbsp;</span>CREW</a></li>
-        <li><a> <span>03&nbsp;&nbsp;</span>TECHNOLOGY</a></li>  
+        <li><a href=#about-section> <span>00&nbsp;&nbsp;</span>About</a></li>
+        <li><a> <span>02&nbsp;&nbsp;</span>GALLERY</li>
+        <li><a> <span>03&nbsp;&nbsp;</span>FAQ</a></li>  
       </ul>
     </div>
   </nav>
+  
+  </div>
     <div class="container">
       <img src="imageshi.jpg" alt="error loading">
       <img src="imageshii.jpg" alt="error loading">
@@ -31,16 +36,88 @@
       </p>
       <button class="btn">play game</button>
       <button class="btns">learn more</button>
-      <div class="container1">
-        <h1 class="h2">ABOUT</h1>
-        <p class="p2">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br> Est cupiditate maxime esse nesciunt aspernatur facere cum non similique <br> nemo consequuntur laboriosam consectetur sit <br> harum adipisci consequatur laudantium, 
-        </p>
-        <img class="img1" src="images2.jpg" alt="">
+      </div>
+        <div class="container4">
+          <H1 class="h3" id="about-section">ABOUT</H1>
+          <!-- <a href="#About" class="btns">happy</a> -->
+          <div class="icon">
+        <ul>
+          <li class="right">
+            <i class="fa fa-rocket"></i>
+            <span>-ROCKET</span>
+           <P> Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br> Est cupiditate maxime esse nesciunt aspernatur facere cum non similique <br> nemo consequuntur laboriosam consectetur sit <br> harum adipisci consequatur laudantium,</P>
+          </li>
+          <li class="left">
+            <i class="fa fa-earth"></i>
+            <span>-EARTH</span>
+           <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br> Est cupiditate maxime esse nesciunt aspernatur facere cum non similique <br> nemo consequuntur laboriosam consectetur sit <br> harum adipisci consequatur laudantium,</P>
+          </li>
+          <li  class="right">
+            <i class="fa fa-moon"></i>
+            <span>-MOON</span>
+            <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br> Est cupiditate maxime esse nesciunt aspernatur facere cum non similique <br> nemo consequuntur laboriosam consectetur sit <br> harum adipisci consequatur laudantium,</P>
+          </li>
+          <li class="left">
+            <i class="fa fa-star"></i>
+            <span>-STAR</span>
+            <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br> Est cupiditate maxime esse nesciunt aspernatur facere cum non similique <br> nemo consequuntur laboriosam consectetur sit <br> harum adipisci consequatur laudantium,</P>
+          </li>
+          <li class="right">
+            <i class="fa fa-sun"></i>
+            <span>-SUN</span>
+            <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br> Est cupiditate maxime esse nesciunt aspernatur facere cum non similique <br> nemo consequuntur laboriosam consectetur sit <br> harum adipisci consequatur laudantium,</P>
+          </li>
+        </ul>
+          </div>
+          </div>
         <!-- <button class="btn">play game</button> -->
         <!-- <button class="btns">learn more</button> -->
-      </div>
+        <h1 class="h3" style="color: black;">GALLERY</h1>
+        <div class="container2">
+          <H2 class="h3">images</H2>
+          <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="imageshi.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="imageshii.jpg" alt=""></div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+        
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          </div>
+        </div>
+        <div class="section">
+          <h1 class="h2">FAQ</h1>
+         <h3 class="FAQ">write review</h3>
+         <p class="FAQ" >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <div>your reviews</div>
+      <textarea name="reviews" id="" cols="100" rows="10">your reviews</textarea>
+      <h3>info</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+   <div>info</div>
+   <textarea name="reviews" id="" cols="100" rows="10">your reviews</textarea>
+        </div>
+  
+    <!-- <script src="https://kit.fontawesome.com/yourcode.js"></script> -->
 
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> 
+       <script>
+          const swiper = new Swiper('.swiper', {
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+
+       </script>
+        
 </body>
 </html>

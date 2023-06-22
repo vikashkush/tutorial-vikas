@@ -10,6 +10,7 @@ html{
     color: white;
   }
   
+  
   .logo img {
     margin-left: 5%;
     width: 100px;
@@ -93,8 +94,50 @@ html{
     height:80vh;
    /* margin-bottom: 80%; */
   }
+  .container1{
+    background-color: aqua;
+  }
+.icofont-space{
+  margin-left: 60%;
+}
+.h3{
+  text-align:center;
+  align-items: center;
+  border-color: rgb(45, 45, 87);
+  border-radius: 2px;
+}
+.container2{
+  width: 100%;
+  height: 100vh;
+  background: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swiper-slide{
+  text-align:center;
+  align-items: center;
 
-  
-  
+}
+.swiper-slide img{
+  width: 60%;
+}
+/*------ ABOUT------- */
+.container4{
+  color: white;
+  background-image: url(space.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+  .left{
+    margin-left: 60%;
+    /* background-color: rgb(14, 160, 160); */
+    /* color:white; */
+  }
+  .section{
+    color: black;
+  }
+
+
   
   
