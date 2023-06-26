@@ -85,11 +85,18 @@ text-align: center;
 }
 .card-img-top{
   width: 100%;
-  height: 300px;
+  height: 400px;
 }
 .Testimonals{
   background-color: rgb(123, 236, 202);
-}          
+}  
+.btn-cont{
+  background-color: brown;
+  border-radius: 5px;
+}        
+ .btn-cont:hover{
+  background-color: rgb(168, 168, 230);
+ }
 .swiper-slide{
     width: 80%;
     display: flex;
@@ -107,14 +114,158 @@ text-align: center;
 .test-img{
   border-radius: 50%;
 }
+.card{
+  display: flex;
+}
 
 
 
+  /* contact */
 
+.form-main {
+  background: url(images/cont.jpg) no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .main-wrapper {
+    border-radius: 10px;
+    padding: 45px;
+    width: 40%;
+    box-shadow: 0 0 5px 5px #00000020;
+    backdrop-filter: blur(5px);
+    background-color: #ffffff85;
+    @media screen and (max-width: 991px) {
+      width: 70%;
+    }
+    @media screen and (max-width: 767px) {
+      width: 90%;
+    }
+    .form-head {
+      font-size: 30px;
+      line-height: 40px;
+      font-weight: 600;
+      text-align: center;
+      margin: 0px 0 25px;
+    }
+    .form-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 15px;
+      .form-card {
+        position: relative;
+        width: 100%;
 
+        .form-input {
+          padding: 20px 25px 15px;
+          width: 100%;
+          border: 1px solid black;
+          border-radius: 5px;
+          background: transparent;
+          outline: none;
+          font-size: 20px;
+          line-height: 30px;
+          font-weight: 400;
+              box-sizing: border-box;
 
+          &:valid,
+          &:focus {
+            border: 1px solid gray;
+          }
 
+          &:valid ~ .form-label,
+          &:focus ~ .form-label {
+            color: color-gray;
+            top: 30%;
+            transform: translateY(-70%);
+            font-size: 13px;
+            line-height: 23px;
+          }
 
+          &:-webkit-autofill,
+          &:-webkit-autofill:hover,
+          &:-webkit-autofill:focus,
+          &:-webkit-autofill:active {
+            transition: background-color 9999s ease-in-out 0s;
+          }
+          &::-webkit-outer-spin-button,
+          &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+        }
 
+        .form-label {
+          position: absolute;
+          left: 25px;
+          top: 50%;
+          transform: translateY(-50%);
+          pointer-events: none;
+          transition: 0.3s;
+          margin: 0;
+          font-size: 18px;
+          line-height: 28px;
+          font-weight: 500;
+        }
+        .form-textarea {
+          padding: 20px 25px 15px;
+          width: 100%;
+          border: 1px solid black;
+          border-radius: 5px;
+          background: transparent;
+          outline: none;
+          font-size: 20px;
+          line-height: 30px;
+          font-weight: 400;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          resize: none;
+              box-sizing: border-box;
 
- 
+          &:valid,
+          &:focus {
+            border: 1px solid gray;
+          }
+          
+
+          &:valid ~ .form-textarea-label,
+          &:focus ~ .form-textarea-label {
+            color: gray;
+            top: 18%;
+            transform: translateY(-82%);
+            font-size: 13px;
+            line-height: 23px;
+          }
+
+          &:-webkit-autofill,
+          &:-webkit-autofill:hover,
+          &:-webkit-autofill:focus,
+         /*----- footer------- */
+         .footer{
+          color:#fff;
+          background-color: #0d2857;
+          }
+          
+          .list-style{
+          list-style-type:none!important;
+          cursor:pointer;
+          font-size:.75rem;
+          opacity:.8;
+          }
+          .copy-right{
+          font-size:.75rem;
+          opacity:.8;
+          }
+          .Analyst {
+          width: 87.7px;
+          height: 23.7px;
+          margin: 10.7px 0 5.2px 10.2px;
+          color: #fff;
+          }
+
+          
