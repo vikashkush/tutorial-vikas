@@ -1,4 +1,9 @@
   /* home */
+  @media screen and (max-width: 991px) {
+
+  }
+  @media screen and (max-width: 767px) {
+  }
   *{
   margin: 0%;
   padding: 0%;
@@ -128,20 +133,15 @@ text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center;}
   .main-wrapper {
     border-radius: 10px;
     padding: 45px;
     width: 40%;
     box-shadow: 0 0 5px 5px #00000020;
     backdrop-filter: blur(5px);
-    background-color: #ffffff85;
-    @media screen and (max-width: 991px) {
-      width: 70%;
-    }
-    @media screen and (max-width: 767px) {
-      width: 90%;
-    }
+    background-color: #ffffff85;}
+   
     .form-head {
       font-size: 30px;
       line-height: 40px;
@@ -154,10 +154,10 @@ text-align: center;
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      gap: 15px;
+      gap: 15px;}
       .form-card {
         position: relative;
-        width: 100%;
+        width: 100%;}
 
         .form-input {
           padding: 20px 25px 15px;
@@ -225,7 +225,7 @@ text-align: center;
           -webkit-box-orient: vertical;
           overflow: hidden;
           resize: none;
-              box-sizing: border-box;
+              box-sizing: border-box;}
 
           &:valid,
           &:focus {
